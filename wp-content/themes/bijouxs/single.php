@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+SINGLE VIEW?
 		<div id="container">
 			<div id="content" role="main">
 

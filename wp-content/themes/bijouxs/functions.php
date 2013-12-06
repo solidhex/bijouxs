@@ -550,6 +550,14 @@ function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FAL
 	}
 }
 
+function get_first_cookbook()
+{
+	$pages = get_pages( 'child_of=3813' );
+	$link = get_page_link( $pages[0]->ID );
+
+	return $link;
+}
+
 function is_developer()
 {
 	$user = wp_get_current_user();

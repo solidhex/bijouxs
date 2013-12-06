@@ -41,7 +41,8 @@ $(function() {
 			mouseWheel: false,
 			theme: "dark-2",
 			advanced:{
-				autoExpandHorizontalScroll:true
+				autoExpandHorizontalScroll:true,
+				updateOnContentResize: true
 			}
 		});
 	});

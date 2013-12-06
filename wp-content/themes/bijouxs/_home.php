@@ -39,8 +39,8 @@
 	<?php endif; ?>
 </section>
 <div class="sub-nav Gothic720BT-RomanB">
-	<a href="http://example.com/">Read all the Little Jewels &raquo;</a>
-	<a href="http://example.com/">Get the Cookbook &raquo;</a>
+	<a href="<?php echo get_permalink( 3752 ); ?>">Read all the Little Jewels &raquo;</a>
+	<a href="<?php echo get_first_cookbook(); ?>">Get the Cookbook &raquo;</a>
 </div>
 
 <?php

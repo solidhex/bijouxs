@@ -34,7 +34,7 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<?php if ( is_front_page() ): ?>
+<?php if ( is_front_page() || is_page_template( 'cookbook.php' ) ): ?>
 <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/jquery.mCustomScrollbar.css" type="text/css">
 <?php endif ?>
 <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -58,7 +58,7 @@
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="<?php echo get_bloginfo('template_directory') ?>/js/bijouxs.js" type="text/javascript" charset="utf-8"></script>
+<script src="<?php echo get_bloginfo('template_directory') ?>/js/bijouxs.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -88,9 +88,9 @@
 				<ul class="Gothic720BT-RomanB">
 				    <li><a href="<?php bloginfo( 'url' ); ?>" <?php if ( is_front_page() ) { echo " class='current'"; } ?>>home</a></li>
 				    <li><a href="<?php echo get_permalink( 3752 ); ?>"<?php if ( is_home() ) { echo " class='current'"; } ?>>blog</a></li>
-				    <li><a href="<?php echo get_category_link( 6 ); ?>" <?php if (in_category( 'recipes' )) { echo "class='current'"; } ?>>recipes</a></li>
-				    <li><a href="<?php echo get_permalink( 3813 ); ?>">cookbook</a></li>
-				    <li><a href="http://example.com/">shop</a></li>
+				    <li><a href="<?php echo get_category_link( 6 ); ?>"<?php if (in_category( 'recipes' )) { echo "class='current'"; } ?>>recipes</a></li>
+				    <li><a href="<?php echo get_first_cookbook(); ?>"<?php if ( is_page_template('cookbook.php') ) { echo " class='current'"; } ?>>cookbook</a></li>
+				    <li><a href="<?php echo get_page_link( 3853 ); ?>">shop</a></li>
 				    <li><a href="<?php echo get_page_link( 2 ); ?>"<?php if (is_page( 'about' )) { echo " class='current'"; } ?>>about</a></li>
 				    <li><a href="<?php echo get_page_link( 6 ); ?>"<?php if (is_page( 'contact' )) { echo " class='current'"; } ?>>contact</a></li>
 				</ul>
@@ -98,16 +98,19 @@
 		</nav>
 	</header>
 
-
 	<?php if ( is_front_page() ): ?>
 		<section class="slider">
-			<?php // echo get_attached_images( $post->ID, "full" ); ?>
 			<?php
 				$posts = get_posts('numberposts=12');
 				foreach ($posts as $post) {
 					echo get_attached_images( $post->ID, "carousel", TRUE );
 				}
 			?>
+		</section>
+
+	<?php elseif ( is_page_template('cookbook.php') ): ?>
+		<section class="slider">
+			<?php echo get_attached_images( $post->ID, "carousel" ); ?>
 		</section>
 	<?php endif ?>
 
