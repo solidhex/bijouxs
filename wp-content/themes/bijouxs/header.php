@@ -75,6 +75,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="wrapper" class="hfeed wrapper">
 	<header>
 		<div class="pipe">
@@ -90,7 +91,7 @@
 				    <li><a href="<?php echo get_permalink( 3752 ); ?>"<?php if ( is_home() ) { echo " class='current'"; } ?>>blog</a></li>
 				    <li><a href="<?php echo get_category_link( 6 ); ?>"<?php if (in_category( 'recipes' )) { echo "class='current'"; } ?>>recipes</a></li>
 				    <li><a href="<?php echo get_first_cookbook(); ?>"<?php if ( is_page_template('cookbook.php') ) { echo " class='current'"; } ?>>cookbook</a></li>
-				    <li><a href="<?php echo get_page_link( 3853 ); ?>">shop</a></li>
+				    <li><a href="<?php echo get_page_link( 3853 ); ?>"<?php if ( is_woocommerce() ) { echo " class='current'"; } ?>>shop</a></li>
 				    <li><a href="<?php echo get_page_link( 2 ); ?>"<?php if (is_page( 'about' )) { echo " class='current'"; } ?>>about</a></li>
 				    <li><a href="<?php echo get_page_link( 6 ); ?>"<?php if (is_page( 'contact' )) { echo " class='current'"; } ?>>contact</a></li>
 				</ul>

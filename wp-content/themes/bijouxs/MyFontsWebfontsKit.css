@@ -1,25 +1,32 @@
 /* @license
  * MyFonts Webfont Build ID 2344215, 2012-08-15T01:36:24-0400
- * 
+ *
  * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
+ * Agreement(s) entered into by the website owner. All other parties are
  * explicitly restricted from using the Licensed Webfonts(s).
- * 
+ *
  * You may obtain a valid license at the URLs below.
- * 
+ *
  * Webfont: Gothic 720 Roman by Bitstream
  * URL: http://www.myfonts.com/fonts/bitstream/gothic-720/roman/
  * Copyright: Copyright 1990-2003 Bitstream Inc. All rights reserved.
  * Licensed pageviews: 10,000
- * 
- * 
+ *
+ *
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=2344215
- * 
+ *
  * © 2012 Bitstream Inc
 */
 
 
 
-  
- @font-face {font-family: 'Gothic720BT-RomanB';src: url('webfonts/23C517_0_0.eot');src: url('webfonts/23C517_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/23C517_0_0.woff') format('woff'),url('webfonts/23C517_0_0.ttf') format('truetype');}
- 
+
+@font-face {font-family: 'Gothic720BT-RomanB';src: url('webfonts/23C517_0_0.eot');src: url('webfonts/23C517_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/23C517_0_0.woff') format('woff'),url('webfonts/23C517_0_0.ttf') format('truetype');}
+
+@font-face {
+	font-family: 'Gothic Bold';
+	src: url('webfonts/Gothic720BT-BoldB.eot');  /* IE6+ */
+	src: local('☺'),
+     	url('webfonts/Gothic720BT-BoldB.woff') format('woff'),  /* FF3.6 */
+      	url('webfonts/Gothic720BT-BoldB.ttf') format('truetype');  /* Saf3+,Chrome,Opera10+ */
+}

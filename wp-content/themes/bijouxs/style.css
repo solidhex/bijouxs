@@ -1663,14 +1663,17 @@ code {
 #rp-container:before,
 #rp-container:after,
 #main:before,
-#main:after
+#main:after,
+ul.product-list:before,
+ul.product-list:after
 {
 	content: "";
 	display: table;
 }
 
 #rp-container:after,
-#main:after
+#main:after,
+ul.product-list:after
 {
 	clear: both;
 }
@@ -2701,4 +2704,75 @@ a.newsletter-button small {
 .cook-info p:last-of-type > a {
 	font-size: 12px;
 	text-transform: uppercase;
+}
+
+ul.product-list li {
+	position: relative;
+	float: left;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+ul.product-list li .product-price {
+	display: block;
+	margin-top: 18px;
+	font: 18px 'Gothic Bold';
+	letter-spacing: 0.9px;
+}
+
+ul.product-list li:hover .overlay {
+	opacity: 1;
+}
+
+ul.product-list li .overlay {
+	opacity: 0;
+	position: absolute;
+	display: table;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(41, 38, 33, 0.53);
+	-webkit-transition: opacity 250ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+	transition: opacity 250ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+}
+
+ul.product-list li .overlay .inset {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0 65px;
+	width: 300px;
+	height: 400px;
+}
+
+ul.product-list li:nth-child(2n+2) {
+	margin-right: 26px;
+	margin-left: 26px;
+}
+
+ul.product-list li img {
+	-webkit-box-shadow: 0 0 4px rgba(88,88,85,.32);
+	box-shadow: 0 0 4px rgba(88,88,85,.32);
+}
+
+ul.product-list {
+	margin: 0;
+	padding: 15px 0 192px;
+	list-style: none;
+}
+
+ul.product-list .hentry {
+	background-image: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.product-list li a {
+	color: #fff;
+}
+
+ul.product-list li h2 {
+	font-size: 18px;
+	letter-spacing: 0.9px;
+	line-height: 22px;
 }
