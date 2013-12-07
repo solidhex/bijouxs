@@ -1665,7 +1665,9 @@ code {
 #main:before,
 #main:after,
 ul.product-list:before,
-ul.product-list:after
+ul.product-list:after,
+div.product:before,
+div.product:after
 {
 	content: "";
 	display: table;
@@ -1673,7 +1675,8 @@ ul.product-list:after
 
 #rp-container:after,
 #main:after,
-ul.product-list:after
+ul.product-list:after,
+div.product:after
 {
 	clear: both;
 }
@@ -2761,7 +2764,7 @@ ul.product-list {
 	list-style: none;
 }
 
-ul.product-list .hentry {
+.woocommerce .hentry {
 	background-image: none;
 	padding: 0;
 	margin: 0;
@@ -2775,4 +2778,36 @@ ul.product-list li h2 {
 	font-size: 18px;
 	letter-spacing: 0.9px;
 	line-height: 22px;
+}
+
+.woocommerce div.product,
+.type-product
+{
+	padding: 15px 0 0 0;
+}
+
+div.product .product-gallery {
+	float: left;
+	width: 522px;
+}
+
+.product .product-description {
+	float: right;
+	padding: 0 8px 0 0;
+	width: 364px;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.product .product-description h2 {
+	margin: 0 0 28px;
+	color: #21211d;
+	font: 24px 'Gothic720BT-LightB';
+	line-height: 1;
+	text-transform: uppercase;
+}
+html body.single div#wrapper.hfeed div#main div.product-description div p.price
+{
+	color: #21211d;
+	font: 24px 'Gothic720BT-RomanB';
 }
