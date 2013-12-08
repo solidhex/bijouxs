@@ -2811,3 +2811,16 @@ html body.single div#wrapper.hfeed div#main div.product-description div p.price
 	color: #21211d;
 	font: 24px 'Gothic720BT-RomanB';
 }
+
+html body.single div#wrapper.hfeed div#main div.product-description form.cart button.single_add_to_cart_button {
+	border: none;
+	padding: 10px 35px;
+	float: none;
+	box-shadow: none;
+	text-shadow: none;
+	background: #2d2824;
+	border-radius: 0;
+	text-align: center;
+	font: 14px 'Gothic720BT-RomanB';
+	text-transform: uppercase;
+}
