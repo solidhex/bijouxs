@@ -1667,7 +1667,9 @@ code {
 ul.product-list:before,
 ul.product-list:after,
 div.product:before,
-div.product:after
+div.product:after,
+.product-gallery .thumbs:before,
+.product-gallery .thumbs:after
 {
 	content: "";
 	display: table;
@@ -1676,7 +1678,8 @@ div.product:after
 #rp-container:after,
 #main:after,
 ul.product-list:after,
-div.product:after
+div.product:after,
+.product-gallery .thumbs:after
 {
 	clear: both;
 }
@@ -2825,4 +2828,38 @@ html body.single div#wrapper.hfeed div#main div.product-description form.cart bu
 	text-align: center;
 	font: 14px 'Gothic720BT-RomanB';
 	text-transform: uppercase;
+}
+
+.product-gallery figure {
+	padding: 0;
+	margin: 0 0 28px;
+}
+
+.product-gallery .bx-slider {
+	margin: 0 auto 28px auto;
+	width: 520px;
+}
+
+.product-gallery .thumbs a {
+	display: block;
+	float: left;
+	position: relative;
+	width: 60px;
+	height: 80px;
+	margin: 0 6px 0 0;
+}
+
+.product-gallery .thumbs a.active:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(41, 38, 33, 0.5);
+	z-index: 100;
+}
+
+.product-gallery .thumbs a:last-child {
+	margin-right: 0;
 }

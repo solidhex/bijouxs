@@ -59,6 +59,11 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="<?php echo get_bloginfo('template_directory') ?>/js/bijouxs.js"></script>
+<?php if ( is_product() ): ?>
+<script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/jquery.bxslider.css" type="text/css">
+
+<?php endif ?>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];

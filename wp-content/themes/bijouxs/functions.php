@@ -516,7 +516,7 @@ function twentyten_posted_in() {
 }
 endif;
 
-function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FALSE)
+function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FALSE, $bxlslider = FALSE)
 {
 	$output = "";
 
@@ -527,19 +527,23 @@ function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FAL
 		global $post;
 		$id = $post->ID;
 	}
+	
+	$i = 0;
 
 	// now, retrieve all the images
 	$images = get_children(array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID'));
 
 	if ($images) {
 		foreach ($images as $image) {
-			$i++;
 			// this is a bit of a hack to see if a link is in the description area
 			if ($link = $image->post_content) {
 				$output .= "<a href='$link' rel='external'>" . wp_get_attachment_image($image->ID, $size)  . "</a>";
+			} else if ($bxlslider) {
+				$output .= "<a data-slide-index='" .$i . "' href=''>" . wp_get_attachment_image($image->ID, $size) . "</a>";
 			} else {
 				$output .= wp_get_attachment_image($image->ID, $size);
 			}
+			$i++;
 			if ($single == TRUE && $i == 1)  break;
 		}
 
