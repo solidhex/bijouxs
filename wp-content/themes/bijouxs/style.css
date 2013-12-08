@@ -2764,7 +2764,9 @@ ul.product-list {
 	list-style: none;
 }
 
-.woocommerce .hentry {
+.woocommerce .hentry,
+.woocommerce-page .hentry
+{
 	background-image: none;
 	padding: 0;
 	margin: 0;
