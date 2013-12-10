@@ -527,7 +527,7 @@ function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FAL
 		global $post;
 		$id = $post->ID;
 	}
-	
+
 	$i = 0;
 
 	// now, retrieve all the images
@@ -539,6 +539,9 @@ function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FAL
 			if ($link = $image->post_content) {
 				$output .= "<a href='$link' rel='external'>" . wp_get_attachment_image($image->ID, $size)  . "</a>";
 			} else if ($bxlslider) {
+				if ($i > 7) {
+					break;
+				}
 				$output .= "<a data-slide-index='" .$i . "' href=''>" . wp_get_attachment_image($image->ID, $size) . "</a>";
 			} else {
 				$output .= wp_get_attachment_image($image->ID, $size);
