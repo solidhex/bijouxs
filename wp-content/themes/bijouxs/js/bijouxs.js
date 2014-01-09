@@ -1,4 +1,5 @@
 $(function() {
+
 	hungryMenu.init();
 	slideMenu.init();
 	clearFields.init();
@@ -24,16 +25,18 @@ $(function() {
 	});
 
 	$(window).on("scroll", function () {
-		/*
-		var scrollPos = $(this).scrollTop(),
-			nav = $("#site-nav");
-
-		if (scrollPos >= 113) {
-			nav.addClass("fixie");
+		var headerHeight = 176,
+			scrollPos = $(this).scrollTop(),
+			$gluey = $(".gluey"),
+			$regular = $(".site-nav").not(".gluey");
+			
+		if (scrollPos >= headerHeight) {
+			$gluey.addClass("active");
+			$regular.addClass("inactive");
 		} else {
-			nav.removeClass("fixie");
+			$gluey.removeClass("active");
+			$regular.removeClass("inactive");
 		}
-		*/
 	});
 
 	$(window).load(function () {

@@ -108,7 +108,7 @@
 			</div>
 		</nav>
 
-		<nav role="navigation" class="site-nav sticky">
+		<nav role="navigation" class="site-nav gluey">
 			<div class="pipe">
 				<a href="<?php bloginfo( 'url' ); ?>" id="static-logo"><img src="<?php bloginfo( 'template_directory' ); ?>/images/static-logo.png" width="123" height="26" alt="Smaller Bijouxs Logo" title="Bijouxs
 					 Little Treats from the Kitchen"></a>
@@ -121,6 +121,13 @@
 				    <li><a href="<?php echo get_page_link( 2 ); ?>"<?php if (is_page( 'about' )) { echo " class='current'"; } ?>>about</a></li>
 				    <li><a href="<?php echo get_page_link( 6 ); ?>"<?php if (is_page( 'contact' )) { echo " class='current'"; } ?>>contact</a></li>
 				</ul>
+				<div class="sharing-is-caring">
+					<a href="https://www.facebook.com/pages/Bijouxs-Little-Kitchen-Jewels/128354523888133" rel="external" id="share-fb"></a>
+					<a href="https://twitter.com/bijouxs_com" rel="external" id="share-twitter"></a>
+					<a href="http://www.pinterest.com/bijouxs_com/" rel="external" id="share-pinterest"></a>
+					<a href="#" rel="external" id="share-picture"></a>
+					<a href="#" rel="external" id="share-vimeo"></a>
+				</div>
 			</div>
 		</nav>
 	</header>
