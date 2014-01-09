@@ -24,6 +24,7 @@ $(function() {
 	});
 
 	$(window).on("scroll", function () {
+		/*
 		var scrollPos = $(this).scrollTop(),
 			nav = $("#site-nav");
 
@@ -32,6 +33,7 @@ $(function() {
 		} else {
 			nav.removeClass("fixie");
 		}
+		*/
 	});
 
 	$(window).load(function () {

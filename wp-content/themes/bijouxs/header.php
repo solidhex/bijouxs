@@ -87,7 +87,28 @@
 			<a href="<?php bloginfo( 'url' ); ?>"><img id="logo" role="presentation" src="<?php bloginfo( 'template_directory' ); ?>/images/logo.png" width="312" height="83" alt="Bijouxs Logo" title="Bijouxs | Little Treats from the Kitchen"></a>
 			<?php echo get_search_form(); ?>
 		</div>
-		<nav role="navigation" id="site-nav">
+		<nav role="navigation" class="site-nav">
+			<div class="pipe">
+				<ul class="Gothic720BT-RomanB">
+				    <li><a href="<?php bloginfo( 'url' ); ?>" <?php if ( is_front_page() ) { echo " class='current'"; } ?>>home</a></li>
+				    <li><a href="<?php echo get_permalink( 3752 ); ?>"<?php if ( is_home() || (is_single() && !is_singular('product')) ) { echo " class='current'"; } ?>>blog</a></li>
+				    <li><a href="<?php echo get_category_link( 6 ); ?>"<?php if (in_category( 'recipes' )) { echo "class='current'"; } ?>>recipes</a></li>
+				    <li><a href="<?php echo get_first_cookbook(); ?>"<?php if ( is_page_template('cookbook.php') ) { echo " class='current'"; } ?>>cookbook</a></li>
+				    <li><a href="<?php echo get_page_link( 3853 ); ?>"<?php if ( is_woocommerce() || is_checkout() || is_cart() ) { echo " class='current'"; } ?>>shop</a></li>
+				    <li><a href="<?php echo get_page_link( 2 ); ?>"<?php if (is_page( 'about' )) { echo " class='current'"; } ?>>about</a></li>
+				    <li><a href="<?php echo get_page_link( 6 ); ?>"<?php if (is_page( 'contact' )) { echo " class='current'"; } ?>>contact</a></li>
+				</ul>
+				<div class="sharing-is-caring">
+					<a href="https://www.facebook.com/pages/Bijouxs-Little-Kitchen-Jewels/128354523888133" rel="external" id="share-fb"></a>
+					<a href="https://twitter.com/bijouxs_com" rel="external" id="share-twitter"></a>
+					<a href="http://www.pinterest.com/bijouxs_com/" rel="external" id="share-pinterest"></a>
+					<a href="#" rel="external" id="share-picture"></a>
+					<a href="#" rel="external" id="share-vimeo"></a>
+				</div>
+			</div>
+		</nav>
+
+		<nav role="navigation" class="site-nav sticky">
 			<div class="pipe">
 				<a href="<?php bloginfo( 'url' ); ?>" id="static-logo"><img src="<?php bloginfo( 'template_directory' ); ?>/images/static-logo.png" width="123" height="26" alt="Smaller Bijouxs Logo" title="Bijouxs
 					 Little Treats from the Kitchen"></a>
