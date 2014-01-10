@@ -516,7 +516,7 @@ function twentyten_posted_in() {
 }
 endif;
 
-function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FALSE, $bxlslider = FALSE)
+function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FALSE, $bxlslider = FALSE, $showTitles = FALSE)
 {
 	$output = "";
 
@@ -544,7 +544,11 @@ function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FAL
 				}
 				$output .= "<a data-slide-index='" .$i . "' href=''>" . wp_get_attachment_image($image->ID, $size) . "</a>";
 			} else {
-				$output .= wp_get_attachment_image($image->ID, $size);
+				if ($showTitles) {
+					$output .= '<div data-title="' . get_the_title($id) . '" class="target">' . wp_get_attachment_image($image->ID, $size) . '</div>';
+				} else {
+					$output .= wp_get_attachment_image($image->ID, $size);
+				}
 			}
 			$i++;
 			if ($single == TRUE && $i == 1)  break;

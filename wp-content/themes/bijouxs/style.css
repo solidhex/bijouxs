@@ -1786,46 +1786,20 @@ div#cats ul.subcats {
 	margin: 0;
 }
 
-h3#hdr_ingredients a:link, h3#hdr_ingredients a:visited {
-	display: block;
-	background: url('images/ingredients_off.jpg') no-repeat scroll top left;
-	width: 231px;
-	height: 20px;
-	text-indent: -9999em;
+#hdr_meal_planning {
+	border-top: 1px solid #E9E8E6;
 	border-bottom: 1px solid #E9E8E6;
 }
 
-h3#hdr_ingredients a:hover, h3#hdr_ingredients a.highlighted {
-	background: url('images/ingredients_on.jpg') no-repeat scroll top left;
+.subcat_header a:link, .subcat_header a:visited {
+	font: 12px/29px 'Gothic720BT-RomanB';
+	text-transform: uppercase;
+	color: #292621;
+	text-decoration: none;
 }
 
-h3#hdr_meal_planning a:link, h3#hdr_meal_planning a:visited {
-	border-bottom: 1px solid #E9E8E6;
-	background: url('images/meal_planning_off.jpg') no-repeat scroll top left;
-	width: 231px;
-	height: 21px;
-	text-indent: -9999em;
-	display: block;
-}
-
-h3#hdr_meal_planning a:hover, h3#hdr_meal_planning a.highlighted {
-	background: url('images/meal_planning_on.jpg') no-repeat scroll top left;
-}
-
-h3#hdr_all_categories a:link, h3#hdr_all_categories a:visited {
-	display: block;
-	text-indent: -9999em;
-	background: url('images/categories_off.jpg') no-repeat scroll top left;
-	width: 231px;
-	height: 21px;
-}
-
-h3#hdr_all_categories a:hover, h3#hdr_all_categories a.highlighted {
-	background: url('images/categories_on.jpg') no-repeat scroll top left;
-}
-
-h3#hdr_all_categories a.highlighted {
-	border-bottom: 1px solid #E9E8E6;
+.subcat_header a:hover {
+	color: #ff6600;
 }
 
 div#cats ul.subcats li a:link, div#cats ul.subcats li a:visited {
@@ -1859,15 +1833,22 @@ div#cats #cats_header h3{
 	font-size: 12px;
 	line-height: 20px;
 	color: #21211D;
+	margin-bottom: 2px;
 }
 
 div#cats #cats_header h2{
 	font-family: DidotLPRegularWeb, sans-serif;
 	font-weight: normal;
 	font-style: normal;
-	font-size: 34px;
-	line-height: 42px;
+	font-size: 36px;
+	line-height: 38px;
+	letter-spacing: 0.9px;
 	color: #21211D;
+}
+
+div#cats #cats_header h2 span {
+	display: block;
+	margin: 4px 0 0 0;
 }
 
 #cats_header{ padding-bottom: 14px;}
@@ -2916,4 +2897,36 @@ html body.single div#wrapper.hfeed div#main div.product-description form.cart bu
 
 .product-gallery .thumbs a:last-child {
 	margin-right: 0;
+}
+
+.slider .target {
+	float: left;
+	display: block;
+	position: relative;
+}
+
+.slider .target .overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+	width: 340px;
+	height: 458px;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: opacity 250ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
+	z-index: 200;
+}
+
+.slider .target .overlay_inset {
+	width: 340px;
+	height: 458px;
+	font-size: 18px;
+	line-height: 23px;
+}
+
+.slider .target .overlay:hover {
+	opacity: 1;
 }

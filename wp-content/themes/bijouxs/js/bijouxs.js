@@ -3,6 +3,7 @@ $(function() {
 	hungryMenu.init();
 	slideMenu.init();
 	clearFields.init();
+	sliderOverlay.init();
 
 	$("a[rel=external]").click(function(event) {
 		event.preventDefault();
@@ -53,6 +54,18 @@ $(function() {
 	});
 
 });
+
+var sliderOverlay = {
+	targets: ".slider .target",
+	init: function () {
+		$(sliderOverlay.targets).each(function(index) {
+			var $el = $(this),
+				title = $el.data("title");
+	
+			$('<div class="overlay"><div class="overlay_inset">' + title + '</div></div>').appendTo($el);
+		});
+	}
+};
 
 var hungryMenu = {
 	divs: "div.hungry",

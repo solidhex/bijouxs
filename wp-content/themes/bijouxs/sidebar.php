@@ -39,7 +39,7 @@
 	<div id="cats">
 		<div id="cats_header">
 			<h3>FIND MORE</h3>
-			<h2>LITTLE JEWELS</h2>
+			<h2>LITTLE <span>JEWELS</span></h2>
 		</div>
 		<h3 id="hdr_ingredients" class="subcat_header"><a href="#ingredient_subcat">Ingredients</a></h3>
 			<ul class="subcats" id="ingredient_subcat">

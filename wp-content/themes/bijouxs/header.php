@@ -131,13 +131,12 @@
 			</div>
 		</nav>
 	</header>
-
 	<?php if ( is_front_page() ): ?>
 		<section class="slider">
 			<?php
 				$posts = get_posts('numberposts=12');
 				foreach ($posts as $post) {
-					echo get_attached_images( $post->ID, "carousel", TRUE );
+					echo get_attached_images( $post->ID, "carousel", TRUE, FALSE, TRUE );
 				}
 			?>
 		</section>
