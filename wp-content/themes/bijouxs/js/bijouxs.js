@@ -46,8 +46,8 @@ $(function() {
 			autoDraggerLength: false,
 			mouseWheel: false,
 			theme: "dark-2",
-			advanced:{
-				autoExpandHorizontalScroll:true,
+			advanced: {
+				autoExpandHorizontalScroll: true,
 				updateOnContentResize: true
 			}
 		});
@@ -61,7 +61,7 @@ var sliderOverlay = {
 		$(sliderOverlay.targets).each(function(index) {
 			var $el = $(this),
 				title = $el.data("title");
-	
+				
 			$('<div class="overlay"><div class="overlay_inset">' + title + '</div></div>').appendTo($el);
 		});
 	}
