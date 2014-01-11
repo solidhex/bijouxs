@@ -2386,8 +2386,8 @@ body.home .collection {
 	background: #fff;
 	color: #21211d;
 	font-family: 'Gothic720BT-RomanB';
-	-webkit-box-shadow: 0 0 4px rgba(88,88,85,.32);
-	box-shadow: 0 0 4px rgba(88,88,85,.32);
+	-webkit-box-shadow: 0 0 4px rgba(88,88,85,.5);
+	box-shadow: 0 0 4px rgba(88,88,85,.5);
 }
 
 body.home ul {
@@ -2638,6 +2638,7 @@ body.home .collection hgroup h2 {
 .slider img {
 	float: left;
 	max-width: none;
+	display: none;
 }
 
 .home .sub-nav {
@@ -2734,7 +2735,6 @@ a.newsletter-button small {
 	margin-bottom: 24px;
 	font-size: 24px;
 	line-height: 24px;
-/*	background: wheat;*/
 	text-transform: uppercase;
 }
 
@@ -2746,6 +2746,12 @@ a.newsletter-button small {
 	font-size: 12px;
 	text-transform: uppercase;
 }
+
+.page-template-cookbook-php .slider img {
+	margin: 0 12px;
+	box-shadow: 0 0 4px rgba(88,88,85,.5);
+}
+	
 
 ul.product-list li {
 	position: relative;
@@ -2792,8 +2798,8 @@ ul.product-list li:nth-child(2n+2) {
 }
 
 ul.product-list li img {
-	-webkit-box-shadow: 0 0 4px rgba(88,88,85,.32);
-	box-shadow: 0 0 4px rgba(88,88,85,.32);
+	-webkit-box-shadow: 0 0 4px rgba(88,88,85,.5);
+	box-shadow: 0 0 4px rgba(88,88,85,.5);
 }
 
 ul.product-list {
@@ -2833,7 +2839,7 @@ div.product .product-gallery {
 }
 
 div.product .product-gallery .bx-viewport {
-	box-shadow: 0 0 4px rgba(88,88,85,.32);
+	box-shadow: 0 0 4px rgba(88,88,85,.5);
 }
 
 .product .product-description {
@@ -2880,6 +2886,10 @@ html body.single div#wrapper.hfeed div#main div.product-description form.cart bu
 	width: 520px;
 }
 
+.product-gallery .bx-wrapper {
+	box-shadow: 0 0 4px rgba(88,88,85,.5);
+}
+
 .product-gallery .thumbs a {
 	display: block;
 	float: left;
@@ -2887,7 +2897,7 @@ html body.single div#wrapper.hfeed div#main div.product-description form.cart bu
 	width: 60px;
 	height: 80px;
 	margin: 0 6px 0 0;
-	box-shadow: 0 0 4px rgba(88,88,85,.32);
+	box-shadow: 0 0 4px rgba(88,88,85,.5);
 }
 
 .product-gallery .thumbs a.active:before {
@@ -2909,6 +2919,7 @@ html body.single div#wrapper.hfeed div#main div.product-description form.cart bu
 	float: left;
 	display: block;
 	position: relative;
+	cursor: pointer;
 }
 
 .slider .target .overlay {
@@ -2920,10 +2931,10 @@ html body.single div#wrapper.hfeed div#main div.product-description form.cart bu
 	padding: 10px;
 	width: 340px;
 	height: 458px;
+	opacity: 0;
 	background: rgba(41,38, 33, 0.53);
 	z-index: 200;
-	display: none;
-/*	transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);*/
+	transition: all 250ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
 }
 
 .slider .target .overlay_inset {
@@ -2934,5 +2945,5 @@ html body.single div#wrapper.hfeed div#main div.product-description form.cart bu
 }
 
 .slider .target:hover .overlay{
-/*	opacity: 1;*/
+	opacity: 1;
 }

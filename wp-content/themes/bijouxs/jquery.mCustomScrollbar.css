@@ -3,8 +3,13 @@
 .mCSB_container{
 	width:auto;
 	margin-right:30px;
-	overflow:hidden;
+/*	overflow:hidden;*/
 }
+
+.page-template-cookbook-php .mCSB_container {
+	padding-top: 4px;
+}
+
 .mCSB_container.mCS_no_scrollbar{
 	margin-right:0;
 }
@@ -69,7 +74,7 @@
 	height:auto;
 	margin-right:0;
 	margin-bottom:30px;
-	overflow:hidden;
+/*	overflow:hidden;*/
 }
 .mCSB_horizontal>.mCSB_container.mCS_no_scrollbar{
 	margin-bottom:0;

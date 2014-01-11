@@ -545,7 +545,7 @@ function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FAL
 				$output .= "<a data-slide-index='" .$i . "' href=''>" . wp_get_attachment_image($image->ID, $size) . "</a>";
 			} else {
 				if ($showTitles) {
-					$output .= '<div data-title="' . get_the_title($id) . '" class="target">' . wp_get_attachment_image($image->ID, $size) . '</div>';
+					$output .= '<div data-link-to="' . get_permalink($id) .' "data-title="' . get_the_title($id) . '" class="target">' . wp_get_attachment_image($image->ID, $size) . '</div>';
 				} else {
 					$output .= wp_get_attachment_image($image->ID, $size);
 				}
