@@ -108,7 +108,7 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 #primary,
 #secondary {
 	float: left;
-	overflow: hidden;
+/*	overflow: hidden;*/
 	width: 231px;
 }
 #secondary {
@@ -1324,6 +1324,7 @@ h3#hdr_archives {
 }
 
 div#archives {
+	position: relative;
 	cursor: pointer;
 }
 

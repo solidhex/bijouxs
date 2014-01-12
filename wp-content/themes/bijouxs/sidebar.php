@@ -69,9 +69,16 @@
 				var list = $(elem).find("ul");
 				list.find("a").last().css({'border-bottom' : 'none'});
 				$(elem).hover(function() {
-					list.show();
+					var wrapperTop = $("#wrapper").height();
+
+					list.fadeIn("fast");
+					
+					if (Math.ceil(list.offset().top) >= wrapperTop) {
+						list.css({"bottom" : "53px"});
+					}
+										
 				}, function() {
-					list.hide();
+					list.fadeOut("fast");
 				});
 			}
 		};
