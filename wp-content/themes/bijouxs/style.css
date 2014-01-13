@@ -1700,7 +1700,9 @@ div.product:after,
 .post-numbering{padding:4px 0px 0px 0px; height:33px; color:#aeaca9;margin-left:20px; margin-bottom:1px}
 .pval{position:relative; top:0px; left:5px; font-size: 37px; font-weight: 100; color: #21211d; font-family: DidotLPRegularWeb, sans-serif;}
 .entry-content p{margin:0px 14px 24px 24px; line-height:22px; font-size: 14px; font-family: 'Gothic720BT-RomanB', sans-serif; color: #21211d; }
-#content .entry-content p a img {
+#content .entry-content p a img, 
+#content .entry-content p > img
+{
 /*	margin:0px 14px 24px 24px; line-height:22px; font-size: 14px; font-family: Gothic720BT-LightB, sans-serif; color: #21211d; */
 	margin-left: -22px;
 }
