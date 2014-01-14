@@ -225,25 +225,5 @@
 			}
 
     	?>
-<script type="text/javascript" charset="utf-8">
-	$(function() {
-
-		$("div.comments-share").hover(function() {
-							$(this).children("div.share-container").show();
-						}, function() {
-								$(this).children("div.share-container").hide();
-				});
-
-				/*
-		$("div.overlay_inset").each(function() {
-			var maxlength = 22;
-			var string = $(this).text();
-			if (string.length > maxlength) {
-				$(this).text(string.substr(0, maxlength) + '...');
-			}
-		});
-				*/
-	});
-</script>
     </div>
 </div>

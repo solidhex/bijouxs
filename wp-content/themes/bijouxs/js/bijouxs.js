@@ -4,6 +4,7 @@ $(function() {
 	slideMenu.init();
 	clearFields.init();
 	sliderOverlay.init();
+	archiveList.init("div#archives");
 
 	$("a[rel=external]").click(function(event) {
 		event.preventDefault();
@@ -24,8 +25,14 @@ $(function() {
 		event.preventDefault();
 		window.open(this.href);
 	});
-
-	$(window).on("scroll", function () {
+	
+	$("div.comments-share").hover(function() {
+		$(this).children("div.share-container").show();
+			}, function() {
+		$(this).children("div.share-container").hide();
+	});
+	
+	function glueyHeader() {
 		var headerHeight = 176,
 			scrollPos = $(this).scrollTop(),
 			$gluey = $(".gluey"),
@@ -38,9 +45,12 @@ $(function() {
 			$gluey.removeClass("active");
 			$regular.removeClass("inactive");
 		}
-	});
+	}
+
+	$(window).on("scroll", glueyHeader);
 
 	$(window).load(function () {
+		glueyHeader();
 		var $imgs = $(".slider img");
 		$imgs.fadeIn("fast");
 		$(".slider").mCustomScrollbar({
@@ -129,6 +139,25 @@ var slideMenu = {
 			var link = $(this).children("a");
 			link.addClass("highlighted");
 			$(this).next("ul").show();
+		});
+	}
+};
+
+var archiveList = {
+	init: function(elem) {
+		var list = $(elem).find("ul");
+		list.find("a").last().css({'border-bottom' : 'none'});
+		$(elem).hover(function() {
+			var wrapperTop = $("#wrapper").height();
+
+			list.fadeIn("fast");
+			
+			if (Math.ceil(list.offset().top) >= wrapperTop) {
+				list.css({"bottom" : "53px"});
+			}
+								
+		}, function() {
+			list.fadeOut("fast");
 		});
 	}
 };
