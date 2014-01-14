@@ -1308,6 +1308,10 @@ ul#archives_list a:link, ul#archives_list a:visited {
 	padding: 6px 0;
 }
 
+ul#archives_list a:hover {
+	color: #ff6600;
+}
+
 ul#archives_list li {
 	padding: 0;
 	margin: 0;
