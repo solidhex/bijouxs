@@ -7,7 +7,7 @@
 <nav role="navigation" class="cook-sub Gothic720BT-RomanB">
 	<ul>
 	<?php
-		wp_list_pages( 'child_of=3813&title_li=' );
+		wp_list_pages( 'child_of=3813&title_li=&sort_column=menu_order' );
 	?>
 	</ul>
 </nav>

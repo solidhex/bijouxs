@@ -563,7 +563,7 @@ function get_attached_images($pageid = FALSE, $size = "thumbnail", $single = FAL
 
 function get_first_cookbook()
 {
-	$pages = get_pages( 'child_of=3813' );
+	$pages = get_pages( 'child_of=3813&sort_column=menu_order' );
 	$link = get_page_link( $pages[0]->ID );
 
 	return $link;
