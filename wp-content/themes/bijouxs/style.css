@@ -2517,7 +2517,7 @@ body.home .collection hgroup h2 {
 
 #wrapper > header > nav .sharing-is-caring a {
 	display: block;
-	float: left;
+	float: right;
 	margin: 0 0 0 5px;
 	width: 21px;
 	height: 21px;

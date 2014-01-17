@@ -99,11 +99,10 @@
 				    <li><a href="<?php echo get_page_link( 6 ); ?>"<?php if (is_page( 'contact' )) { echo " class='current'"; } ?>>contact</a></li>
 				</ul>
 				<div class="sharing-is-caring">
-					<a href="https://www.facebook.com/pages/Bijouxs-Little-Kitchen-Jewels/128354523888133" rel="external" id="share-fb"></a>
-					<a href="https://twitter.com/bijouxs_com" rel="external" id="share-twitter"></a>
+					<a href="http://instagram.com/bijouxs_com" rel="external" id="share-picture"></a>
 					<a href="http://www.pinterest.com/bijouxs_com/" rel="external" id="share-pinterest"></a>
-					<a href="#" rel="external" id="share-picture"></a>
-					<a href="#" rel="external" id="share-vimeo"></a>
+					<a href="https://twitter.com/bijouxs_com" rel="external" id="share-twitter"></a>
+					<a href="https://www.facebook.com/pages/Bijouxs-Little-Kitchen-Jewels/128354523888133" rel="external" id="share-fb"></a>
 				</div>
 			</div>
 		</nav>
@@ -122,11 +121,10 @@
 				    <li><a href="<?php echo get_page_link( 6 ); ?>"<?php if (is_page( 'contact' )) { echo " class='current'"; } ?>>contact</a></li>
 				</ul>
 				<div class="sharing-is-caring">
-					<a href="https://www.facebook.com/pages/Bijouxs-Little-Kitchen-Jewels/128354523888133" rel="external" id="share-fb"></a>
-					<a href="https://twitter.com/bijouxs_com" rel="external" id="share-twitter"></a>
+					<a href="http://instagram.com/bijouxs_com" rel="external" id="share-picture"></a>
 					<a href="http://www.pinterest.com/bijouxs_com/" rel="external" id="share-pinterest"></a>
-					<a href="#" rel="external" id="share-picture"></a>
-					<a href="#" rel="external" id="share-vimeo"></a>
+					<a href="https://twitter.com/bijouxs_com" rel="external" id="share-twitter"></a>
+					<a href="https://www.facebook.com/pages/Bijouxs-Little-Kitchen-Jewels/128354523888133" rel="external" id="share-fb"></a>
 				</div>
 			</div>
 		</nav>
