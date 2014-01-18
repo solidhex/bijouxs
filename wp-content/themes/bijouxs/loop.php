@@ -131,10 +131,9 @@
 
         <div class="post-numbering">
         <?php  $mykey_values = get_post_custom_values('number');
+	
         if (isset($mykey_values)){
-			foreach ( $mykey_values as $key => $value ) {
-			echo "<span class='pval'>N<sup>o</sup></span><span class='pval' style='position: relative; left: -6px; top: 2px; font-size:30px'>.</span><span class='pval'>".$value."</span>";
-			}
+			echo "<span class='pval'>N<sup>o</sup></span><span class='pval' style='position: relative; left: -6px; top: 2px; font-size:30px'>.</span><span class='pval'>".$mykey_values[0]."</span>";
 		}
 
 
