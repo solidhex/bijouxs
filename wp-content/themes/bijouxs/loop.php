@@ -133,6 +133,9 @@
         <?php  $mykey_values = get_post_custom_values('number');
 	
         if (isset($mykey_values)){
+			/*
+				TODO find out why this double posted on DB upgrade... for now just grab the first entry.Å
+			*/
 			echo "<span class='pval'>N<sup>o</sup></span><span class='pval' style='position: relative; left: -6px; top: 2px; font-size:30px'>.</span><span class='pval'>".$mykey_values[0]."</span>";
 		}
 
