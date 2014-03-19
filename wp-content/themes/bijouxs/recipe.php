@@ -173,10 +173,8 @@ $rid = $_REQUEST['rid'];
 	<div id="recipe_body">
 		<h2 class="recipe_title"><?php echo get_the_title($rid); ?></h2>
 		<?php
-			$recipe = get_post_custom_values('recipe', $rid);
-			foreach ($recipe as $val) {
-				echo nl2br($val);
-			}
+			$recipe = get_post_meta( $rid, 'recipe', TRUE );
+			echo nl2br( $recipe );
 		?>
 	</div>
 	<p id="print_recipe"><a href="javascript:window.print(false);">print recipe</a></p>
