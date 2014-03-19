@@ -36,15 +36,7 @@ get_header();
 						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				        <div class="post-numbering">
-				        <?php  $mykey_values = get_post_custom_values('number');
-						foreach ( $mykey_values as $key => $value ) {
-    						echo "<span class='pval'>N<sup>o</sup></span><span class='pval' style='position: relative; left: -6px; top: 2px; font-size:30px'>.</span><span class='pval'>".$value."</span>"; 
-				  		}
-
-
-
-
-						?>
+				       <span class='pval'>N<sup>o</sup></span><span class='pval' style='position: relative; left: -6px; top: 2px; font-size:30px'>.</span><span class='pval'><?php echo get_post_meta( $post->ID, 'number', TRUE ); ?></span>
 				        </div>
 							<?php if ( in_category( 'recipes' )) {?> 
 										<div class="talk-bubble" onclick="window.open('<?php echo get_permalink(296); ?>?rid=<?php the_ID(); ?>', 'recipe', 'scrollbars=yes,toolbar=no,resizable=yes,width=596,height=600, screenX=100, screenY=100'); return false;">
